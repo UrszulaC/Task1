@@ -9,3 +9,9 @@
 # Expose the correct port
 
 # Create an entrypoint
+FROM python:latest 
+COPY . .
+RUN pip install -r requirements.txt
+ENV YOUR_NAME Ula
+EXPOSE 5500
+ENTRYpoint ["python", "app.py"]
